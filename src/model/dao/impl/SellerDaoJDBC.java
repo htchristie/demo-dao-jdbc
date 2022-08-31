@@ -10,7 +10,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SellerDaoJDBC implements SellerDao {
     //jdbc implementation of SellerDao interface
@@ -56,11 +59,59 @@ public class SellerDaoJDBC implements SellerDao {
 
             if (resultSet.next()) {
                 Department department = instantiateDepartment(resultSet);
-                Seller seller = instantiateSeller(resultSet, department);
-
-                return seller;
+                return instantiateSeller(resultSet, department);
             }
             return null;
+        }
+        catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        }
+        finally {
+            DB.closeStatement(statement);
+            DB.closeResultSet(resultSet);
+        }
+    }
+
+    @Override
+    public List<Seller> findAll() {
+        return null;
+    }
+
+    @Override
+    public List<Seller> findByDepartment(Department department) {
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+
+        try {
+            statement = connection.prepareStatement(
+                    "SELECT seller.*,department.Name as DepName "
+                            + "FROM seller INNER JOIN department "
+                            + "ON seller.DepartmentId = department.Id "
+                            + "WHERE DepartmentId = ? "
+                            + "ORDER BY Name"
+            );
+
+            statement.setInt(1, department.getId());
+            resultSet = statement.executeQuery();
+
+            List<Seller> sellers = new ArrayList<>();
+            Map<Integer, Department> departmentMap = new HashMap<>();
+
+            while (resultSet.next()) {
+
+                // if department already exists
+                Department dep = departmentMap.get(resultSet.getInt("DepartmentId"));
+
+                // if department doensn't exist yet
+                if (dep == null) {
+                    dep = instantiateDepartment(resultSet);
+                    departmentMap.put(resultSet.getInt("DepartmentId"), dep);
+                }
+
+                Seller seller = instantiateSeller(resultSet, dep);
+                sellers.add(seller);
+            }
+            return sellers;
         }
         catch (SQLException e) {
             throw new DbException(e.getMessage());
@@ -89,10 +140,5 @@ public class SellerDaoJDBC implements SellerDao {
         department.setName(resultSet.getString("DepName"));
 
         return department;
-    }
-
-    @Override
-    public List<Seller> findAll() {
-        return null;
     }
 }
