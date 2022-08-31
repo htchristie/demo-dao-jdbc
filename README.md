@@ -1,5 +1,5 @@
 # Demo Dao JDBC
-Basic implementation of entity Daos using JDBC.
+Basic implementation of entity Daos with JDBC and MySQL.
 
 ## Content
 - Entity Dao interfaces
