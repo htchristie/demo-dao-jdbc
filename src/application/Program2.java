@@ -2,7 +2,9 @@ package application;
 
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
+import model.dao.SellerDao;
 import model.entities.Department;
+import model.entities.Seller;
 
 import java.util.Scanner;
 
@@ -12,10 +14,19 @@ public class Program2 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(in);
+        DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
+
+        System.out.println("Find department by Id: ");
+
+        System.out.print("Enter a department id: ");
+        int id = scan.nextInt();
+        Department department = departmentDao.findById(id);
+
+        System.out.println(department);
+        System.out.println("-------------------");
 
         /* System.out.println("Insert department: ");
 
-        DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
         Department newDepartment = new Department(null, "Music");
         departmentDao.insert(newDepartment);
 
