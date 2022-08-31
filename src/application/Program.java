@@ -2,6 +2,7 @@ package application;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
+import model.dao.impl.SellerDaoJDBC;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -28,5 +29,13 @@ public class Program {
         }
 
         System.out.println("-------------------");
+
+        System.out.println("Find all Sellers: ");
+
+        sellerList = sellerDao.findAll();
+
+        for (Seller seller1: sellerList) {
+            System.out.println(seller1);
+        }
     }
 }
