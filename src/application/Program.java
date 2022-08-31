@@ -65,7 +65,7 @@ public class Program {
 
         System.out.println("-------------------"); */
 
-        System.out.println("Delete seller: ");
+        /* System.out.println("Delete seller: ");
         System.out.print("Insert seller Id: ");
         int id = scan.nextInt();
         sellerDao.deleteById(id);
@@ -75,7 +75,7 @@ public class Program {
 
         for (Seller seller1: sellerList) {
             System.out.println(seller1);
-        }
+        } */
 
         scan.close();
     }
