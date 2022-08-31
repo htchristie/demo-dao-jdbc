@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edd86f36-e3aa-4f05-ac4d-a3b7cfe74cb9" name="Changes" comment="Seller and Department Daos">
-      <change afterPath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" afterDir="false" />
+    <list default="true" id="edd86f36-e3aa-4f05-ac4d-a3b7cfe74cb9" name="Changes" comment="SellerDaoJDBC &amp; DaoFactory classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661953969024</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="SellerDaoJDBC &amp; DaoFactory classes">
+      <created>1661959734600</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661959734600</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +132,7 @@
     <MESSAGE value="Department class" />
     <MESSAGE value="Seller entity class" />
     <MESSAGE value="Seller and Department Daos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Seller and Department Daos" />
+    <MESSAGE value="SellerDaoJDBC &amp; DaoFactory classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="SellerDaoJDBC &amp; DaoFactory classes" />
   </component>
 </project>
