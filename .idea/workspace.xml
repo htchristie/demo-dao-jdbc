@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edd86f36-e3aa-4f05-ac4d-a3b7cfe74cb9" name="Changes" comment="SellerDaoJDBC findAll">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+    <list default="true" id="edd86f36-e3aa-4f05-ac4d-a3b7cfe74cb9" name="Changes" comment="SellerDaoJDBC insert">
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661969160855</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="SellerDaoJDBC insert">
+      <created>1661969927037</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661969927037</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +173,7 @@
     <MESSAGE value="refactor SellerDaoJDBC findById" />
     <MESSAGE value="SellerDaoJDBC findByDepartment" />
     <MESSAGE value="SellerDaoJDBC findAll" />
-    <option name="LAST_COMMIT_MESSAGE" value="SellerDaoJDBC findAll" />
+    <MESSAGE value="SellerDaoJDBC insert" />
+    <option name="LAST_COMMIT_MESSAGE" value="SellerDaoJDBC insert" />
   </component>
 </project>
