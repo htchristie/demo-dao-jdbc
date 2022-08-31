@@ -45,6 +45,19 @@ public class Program2 {
 
         System.out.println("-------------------"); */
 
+        System.out.println("Update department: ");
+        System.out.print("Enter a department Id: ");
+        id = scan.nextInt();
+
+        department = departmentDao.findById(id);
+        department.setName("Perfumes");
+        departmentDao.update(department);
+
+        System.out.println("Update complete!");
+        System.out.println(department);
+
+        System.out.println("-------------------");
+
         scan.close();
     }
 }
