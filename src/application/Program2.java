@@ -6,6 +6,7 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
+import java.util.List;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -23,6 +24,16 @@ public class Program2 {
         Department department = departmentDao.findById(id);
 
         System.out.println(department);
+        System.out.println("-------------------");
+
+        System.out.println("Find all departments: ");
+
+        List<Department> departments = departmentDao.findAll();
+
+        for (Department dep: departments) {
+            System.out.println(dep);
+        }
+
         System.out.println("-------------------");
 
         /* System.out.println("Insert department: ");
