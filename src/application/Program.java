@@ -8,9 +8,14 @@ import model.entities.Seller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
+
+import static java.lang.System.in;
 
 public class Program {
     public static void main(String[] args) {
+
+        Scanner scan = new Scanner(in);
 
         System.out.println("Find Seller by Id: ");
 
@@ -49,7 +54,7 @@ public class Program {
 
         System.out.println("-------------------"); */
 
-        System.out.println("Update seller: ");
+        /* System.out.println("Update seller: ");
 
         seller = sellerDao.findById(9);
         seller.setName("Gregory");
@@ -57,5 +62,21 @@ public class Program {
 
         System.out.println("Update complete!");
         System.out.println(seller);
+
+        System.out.println("-------------------"); */
+
+        System.out.println("Delete seller: ");
+        System.out.print("Insert seller Id: ");
+        int id = scan.nextInt();
+        sellerDao.deleteById(id);
+        System.out.println("Seller with Id " + id + " was deleted from Database.");
+
+        sellerList = sellerDao.findAll();
+
+        for (Seller seller1: sellerList) {
+            System.out.println(seller1);
+        }
+
+        scan.close();
     }
 }

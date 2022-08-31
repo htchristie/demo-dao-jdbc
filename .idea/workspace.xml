@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edd86f36-e3aa-4f05-ac4d-a3b7cfe74cb9" name="Changes" comment="SellerDaoJDBC insert">
+    <list default="true" id="edd86f36-e3aa-4f05-ac4d-a3b7cfe74cb9" name="Changes" comment="SellerDaoJDBC update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/SellerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/SellerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661969927037</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="SellerDaoJDBC update">
+      <created>1661970288447</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661970288447</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +184,7 @@
     <MESSAGE value="SellerDaoJDBC findByDepartment" />
     <MESSAGE value="SellerDaoJDBC findAll" />
     <MESSAGE value="SellerDaoJDBC insert" />
-    <option name="LAST_COMMIT_MESSAGE" value="SellerDaoJDBC insert" />
+    <MESSAGE value="SellerDaoJDBC update" />
+    <option name="LAST_COMMIT_MESSAGE" value="SellerDaoJDBC update" />
   </component>
 </project>
